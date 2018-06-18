@@ -1,5 +1,5 @@
 const database = require("./database");
-const createCard = require("./createCard");
+
 
 //DOM creator
 const DOMTaskBuilder = () => {
@@ -15,10 +15,10 @@ const DOMTaskBuilder = () => {
 
 
     //creates To-Do column with header and appends to columns div
-    let divColumn1 = document.createElement('div');
+    let divColumn1 = document.createElement("div");
     divColumn1.className = "column"
     divColumn1.id = "toDo"
-    let divColumn1H3 = document.createElement('h3');
+    let divColumn1H3 = document.createElement("h3");
     divColumn1H3.textContent = "To-Do";
 
     for (task in database.toDo) {
@@ -29,10 +29,10 @@ const DOMTaskBuilder = () => {
     divColumns.appendChild("divColumn1");
 
 //creates Doing column with header and appends to columns div
-    let divColumn2 = document.createElement('div');
+    let divColumn2 = document.createElement("div");
     divColumn2.className = "column"
     divColumn2.id = "doing"
-    let divColumn2H3 = document.createElement('h3');
+    let divColumn2H3 = document.createElement("h3");
     divColumn2H3.textContent = "Doing";
     for (task in database.doing) {
         createCard(database.doing[task], "doing")
@@ -41,10 +41,10 @@ const DOMTaskBuilder = () => {
     divColumns.appendChild("divColumn2")
 
     //creates done column with header and appends to columns div
-    let divColumn3 = document.createElement('div');
+    let divColumn3 = document.createElement("div");
     divColumn3.className = "column"
     divColumn3.id = "done"
-    let divColumn3H3 = document.createElement('h3');
+    let divColumn3H3 = document.createElement("h3");
     divColumn3H3.textContent = "Done";
     for (task in database.done) {
         createCard(database.done[task], "done")
