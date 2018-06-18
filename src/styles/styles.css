@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #FCFCFC;
+}
+
+html {
+    background-color: #4C5454
+}
+
+.column {
+    background-color: #FCFCFC;
+    border: solid 2px hsl(217, 71%, 53%);
+    color: black;
+    margin: 1%;
+    margin-top: 3%;
+    border-radius: 10px;
+    height: 650px
+}
+
+#To-Do * {
+    background-color: rgba(255, 89, 100, .6);
+    border-radius: 10px;
+    border: rgb(255, 89, 100) solid 3px
+}
+
+#doing * {
+    background-color: rgba(255, 231, 76, .6);
+    border-radius: 10px;
+    border: rgb(255, 231, 76) solid 3px
+}
+
+#done * {
+    background-color: rgba(167, 297, 75, .6);
+    border-radius: 10px;
+    border: rgb(167, 297, 75) solid 3px;
+}
