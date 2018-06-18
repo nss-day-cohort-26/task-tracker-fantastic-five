@@ -6,6 +6,7 @@ const database = Object.create({}, {
                 description: "Need to do HW",
                 dueDate: "06/19/2018",
                 dateCompleted: "",
+                category: "uncategorized",
                 id: 0
             },
         writable: true,
@@ -17,6 +18,7 @@ const database = Object.create({}, {
             description: "Use baby wipes for best result",
             dueDate: "06/18/2018",
             dateCompleted: "",
+            category: "uncategorized",
             id: 1
         },
         writable: true,
@@ -28,6 +30,7 @@ const database = Object.create({}, {
             description: "Digging for gold",
             dueDate: "06/20/2018",
             dateCompleted: "",
+            category: "uncategorized",
             id: 2
         },
         writable: true,
@@ -39,6 +42,7 @@ const database = Object.create({}, {
             description: "",
             dueDate: "",
             dateCompleted: "",
+            category: "uncategorized",
             id: 3
         },
         writable: true,
