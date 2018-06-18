@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #FCFCFC;
+    color: white;
+}
+
+html {
+    background-color: #4C5454
+}
+
+.column {
+    background-color: #FCFCFC;
+    border: solid 2px hsl(217, 71%, 53%);
+    color: black;
+    margin: 1%;
+    margin-top: 3%;
+    border-radius: 10px;
+    height: 700px
+}
+
+#To-Do * {
+    background-color: red;
+    border-radius: 10px;
+}
+
+#doing * {
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+#done * {
+    background-color: green;
+    border-radius: 10px;
+}
+
+
+
