@@ -5,6 +5,7 @@ const DOMTaskBuilder = require("./DOMTaskBuilder")
 
 saveDatabase(database, "database")
 loadDatabase("database")
+DOMTaskBuilder()
 
 //run loadDatabase
 //assign event listeners to nav
