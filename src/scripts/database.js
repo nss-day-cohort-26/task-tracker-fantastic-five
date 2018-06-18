@@ -51,8 +51,4 @@ const database = Object.create({}, {
 
 });
 
-for (let i in database) {
-    for (let j in database[i]) {
-        console.log(`${database[i][j]}`)
-    }
-}
+module.exports = database;
