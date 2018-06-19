@@ -2,9 +2,6 @@ const database = require("./database")
 const createCard = require("./createCard")
 const makeDate = require("./makeDate")
 
-let taskSubmit = document.getElementById("taskSubmit")
-console.log(taskSubmit)
-
 
 const createCardButton = () => {
     let title = document.getElementById("taskInput").value;
