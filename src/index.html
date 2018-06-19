@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -34,16 +34,17 @@
     <header></header>
     <section id="dom-output">
       <div class="columns">
-        <div class="column" id="To-Do">
-          <div>task</div>
+        <div class="column" id="To-Do" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+            <div draggable="true"
+            ondragstart="drag(event)" id="please-work">task 1</div>
         </div>
-        <div class="column" id="doing">
-          <div>task</div>
+        <div class="column" id="doing" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event)" id="please-work2">task 2</div>
         </div>
-        <div class="column" id="done">
-          <div>task</div>
+        <div class="column" id="done" ondrop="drop(event, this)" ondragover="allowDrop(event)">
+            <div draggable="true" ondragstart="drag(event, this)" id="please-work3">task 3</div>
         </div>
-      </div>
+    </div>
     </section>
     <footer></footer>
   </article>
