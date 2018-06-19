@@ -1,5 +1,5 @@
 const makeDate = require("./makeDate")
-const archiveMode = requre("./archiveMode")
+const archiveMode = require("./archiveMode")
 
 
 const createCard = (obj, targetId) => {

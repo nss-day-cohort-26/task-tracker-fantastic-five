@@ -40,8 +40,6 @@ const taskBtn = document.querySelector("#createTask");
 
   });
 
- });
-
 };
 
 
@@ -73,8 +71,6 @@ const categoryBtnCreator = () => {
     });
 
   });
-
- });
 
 };
 

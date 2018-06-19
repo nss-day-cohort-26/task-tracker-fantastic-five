@@ -7,7 +7,7 @@ const modalMaker = require("./modal")
 
 saveDatabase(database, "database")
 loadDatabase("database")
-DOMTaskBuilder()
+// DOMTaskBuilder()
 modalMaker.taskBtnCreator()
 
 //run loadDatabase
