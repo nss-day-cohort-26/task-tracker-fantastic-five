@@ -9,8 +9,8 @@ green: rgb(167, 297, 75)
 bright-pink: #B8336A
 */
 
-.navbar {
-    background-color: #FCFCFC;
+nav {
+    background-color: #29335C;
 }
 
 html {
@@ -24,7 +24,7 @@ html {
     margin: 1%;
     margin-top: 3%;
     border-radius: 10px;
-    height: 650px
+    height: 650px;
 }
 
 #To-Do * {
@@ -32,7 +32,6 @@ html {
     border-radius: 10px;
     border: rgb(255, 89, 100) solid 3px;
     box-shadow: 3px 3px #888888;
-
 }
 
 #doing * {
