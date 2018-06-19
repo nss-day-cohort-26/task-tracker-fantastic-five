@@ -6,6 +6,7 @@ const DOMTaskBuilder = require("./DOMTaskBuilder")
 const modalMaker = require("./modal")
 const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
+const dragDrop = require("./dragDrop")
 
 
 saveDatabase(database, "database")
@@ -14,6 +15,7 @@ archiveMode()
 DOMTaskBuilder()
 modalMaker.taskBtnCreator();
 modalMaker.categoryBtnCreator();
+
 
 //run loadDatabase
 //assign event listeners to nav

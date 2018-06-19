@@ -1,6 +1,6 @@
 const makeDate = require("./makeDate")
 const archiveMode = require("./archiveMode")
-const dragFunc = require("./dragdrop")
+const dragDrop = require("./dragDrop")
 
 
 const createCard = (obj, targetId) => {
@@ -8,7 +8,7 @@ const createCard = (obj, targetId) => {
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
     createCardDiv.setAttribute("draggable", "true")
-    createCardDiv.addEventListener("click", dragFunc)
+    createCardDiv.setAttribute("click", dragDrop.drag)
 
     let nameP = document.createElement("p")
     nameP.textContent = obj.title
