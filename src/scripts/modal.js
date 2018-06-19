@@ -1,11 +1,14 @@
-const modal = document.querySelector(".modal");
-const taskBtn = document.querySelector("#createTask");
-const categoryBtn = document.querySelector("#createCategory");
-console.log(taskBtn)
+const createCardButton = require("./createCardButton");
+
+// Task Creator
 
 const taskBtnCreator = () => {
 
+const modal = document.querySelector(".modal");
+const taskBtn = document.querySelector("#createTask");
+
   // Add Modal to Screen
+
   taskBtn.addEventListener("click", () => {
     modal.innerHTML = `<div class="modal-background"></div>
     <div class="modal-card">
@@ -27,6 +30,9 @@ const taskBtnCreator = () => {
     </div>`;
     modal.classList.add("is-active");
 
+    const taskSubmit = document.getElementById("taskSubmit");
+    taskSubmit.addEventListener("click", createCardButton);
+
     //Remove Modal from Screen
     document.querySelector(".delete").addEventListener("click", () => {
       modal.classList.remove("is-active");
@@ -36,11 +42,16 @@ const taskBtnCreator = () => {
 
 };
 
-const categoryBtnCreator = () => {
+taskBtnCreator();
 
+// Category Creator
+
+const categoryBtnCreator = () => {
+  const categoryBtn = document.querySelector("#createCategory");
+  const modal2 = document.querySelector(".modal");
   // Add Modal to Screen
   categoryBtn.addEventListener("click", () => {
-    modal.innerHTML = `<div class="modal-background"></div>
+    modal2.innerHTML = `<div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">Create a Category</p>
@@ -53,17 +64,15 @@ const categoryBtnCreator = () => {
           <button class="button is-success" id="categorySubmit">Submit</button>
         </footer>
       </div>`;
-    modal.classList.add("is-active");
+    modal1.classList.add("is-active");
 
     // Remove Modal from Screen
     document.querySelector(".delete").addEventListener("click", () => {
-      modal.classList.remove("is-active");
+      modal2.classList.remove("is-active");
     });
 
   });
 
 };
 
-
-taskBtnCreator();
 categoryBtnCreator();
