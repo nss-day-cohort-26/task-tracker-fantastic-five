@@ -1,13 +1,14 @@
 const makeDate = require("./makeDate")
 const archiveMode = require("./archiveMode")
+const dragDrop = require("./dragDrop")
 
 
 const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
-    createCardDiv.setAttribute(dragable, "true")
-    createCardDiv.addEventListener("click", dragCard)
+    createCardDiv.setAttribute("draggable", "true")
+    createCardDiv.setAttribute("click", dragDrop.drag)
 
     let nameP = document.createElement("p")
     nameP.textContent = obj.title
@@ -52,14 +53,16 @@ const createCard = (obj, targetId) => {
     } else if (objYear === myYear && myMonth === objMonth && myDay > objDay) {
         overdueMessage()
     }
-if (targetId === "done") {
-    let archiveBtn = document.createElement("button")
-    archiveBtn.type = "button";
-    archiveBtn.addEventListener("click", archiveMode)
-    archiveBtn.textContent = "Archive"
-    createCardDiv.appendChild(archiveBtn)
-}
-  document.getElementById(targetId).appendChild(createCardDiv)
+    if (targetId === "done") {
+        let archiveBtn = document.createElement("button")
+        archiveBtn.type = "button";
+        archiveBtn.addEventListener("click", archiveMode)
+        archiveBtn.textContent = "Archive"
+        createCardDiv.appendChild(archiveBtn)
+    }
+    console.log(document.getElementById(targetId))
+
+    document.getElementById(targetId).appendChild(createCardDiv)
 }
 
 

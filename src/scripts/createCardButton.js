@@ -77,7 +77,15 @@ const createCardButton = () => {
 
         createCard(newCard, "toDo")
     } else {
-        alert("Invalid input")
+        if ((title === "") && (description === "") &&  (dueDate === "")) {
+            alert("Invalid input");
+        } else if (title === "") {
+            alert("Please add a Title for your task");
+        } else if (description === "") {
+            alert("Please add a Description for your task");
+        } else if (dueDate === "") {
+            alert("Please add a Due Date for your task");
+        }
     }
 }
 
