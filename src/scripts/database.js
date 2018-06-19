@@ -1,15 +1,15 @@
 const database = Object.create({}, {
     toDo: {
         value: {
-                0: {
-                    title: "Finish homework",
-                    description: "Need to do HW",
-                    dueDate: "06/19/2018",
-                    dateCompleted: "",
-                    category: "uncategorized",
-                    id: 0
-                }
-            },
+            0: {
+                title: "Finish homework",
+                description: "Need to do HW",
+                dueDate: "06/19/2018",
+                dateCompleted: "",
+                category: "uncategorized",
+                id: 0
+            }
+        },
         writable: true,
         enumerable: true
     },
@@ -55,7 +55,11 @@ const database = Object.create({}, {
         writable: true,
         enumerable: true,
     },
-    categories: [],
+    categories: {
+        value: [],
+        writable: true,
+        enumerable: true
+    },
     currentId: {
         value: 4
     }

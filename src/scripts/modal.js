@@ -1,5 +1,6 @@
 const createCardButton = require("./createCardButton");
 const categoryMaker = require("./categoryMaker");
+const loadLocal = require("./loadLocal");
 
 // Task Creator
 
@@ -30,6 +31,17 @@ const taskBtn = document.querySelector("#createTask");
       </footer>
     </div>`;
     modal.classList.add("is-active");
+    const loadCategories = loadLocal("database");
+
+    const taskDropDown = document.querySelector("#taskDropDown");
+
+    for (let i = 0; i < loadCategories.categories.length; i++) {
+      let options = loadCategories.categories[i];
+      let optionEl = document.createElement("option");
+      optionEl.innerHTML = options;
+      optionEl.value = options;
+      taskDropDown.appendChild(optionEl)
+  }
 
     const taskSubmit = document.getElementById("taskSubmit");
     taskSubmit.addEventListener("click", createCardButton);
