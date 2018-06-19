@@ -1,9 +1,11 @@
 const makeDate = require("./makeDate")
+const archiveMode = requre("./archiveMode")
 
 const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
+    createCardDiv.setAttribute(dragable, "true")
     createCardDiv.addEventListener("click", dragCard)
 
     let nameP = document.createElement("p")
@@ -49,6 +51,13 @@ const createCard = (obj, targetId) => {
     } else if (objYear === myYear && myMonth === objMonth && myDay > objDay) {
         overdueMessage()
     }
+if (targetId === "done") {
+    let archiveBtn = document.createElement("button")
+    archiveBtn.type = "button";
+    archiveBtn.addEventListener("click", archiveMode)
+    archiveBtn.textContent = "Archive"
+    createCardDiv.appendChild(archiveBtn)
+}
   document.getElementById(targetId).appendChild(createCardDiv)
 }
 
