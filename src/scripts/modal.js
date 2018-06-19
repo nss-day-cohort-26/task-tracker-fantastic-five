@@ -14,7 +14,7 @@ const taskBtn = document.querySelector("#createTask");
     modal.innerHTML = `<div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">Create a Task</p>
+        <p class="modal-card-title has-text-centered">Create a Task</p>
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
@@ -25,7 +25,7 @@ const taskBtn = document.querySelector("#createTask");
         <p>Due Date </p><input id="dueDateInput" type="text">
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-primary" id="taskSubmit">Submit</button>
+        <button class="button is-success" id="taskSubmit">Submit</button>
         <select id="taskDropDown"></select>
       </footer>
     </div>`;
@@ -50,7 +50,6 @@ const categoryBtnCreator = () => {
 
   const modal2 = document.querySelector(".modal");
   const categoryBtn = document.querySelector("#createCategory");
-  console.log(categoryBtn);
 
   // Add Modal to Screen
 
@@ -59,7 +58,7 @@ const categoryBtnCreator = () => {
     modal2.innerHTML = `<div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Create a Category</p>
+          <p class="modal-card-title has-text-centered">Create a Category</p>
           <button class="delete" aria-label="close"></button>
         </header>
         <section class="modal-card-body">
