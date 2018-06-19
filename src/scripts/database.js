@@ -44,10 +44,10 @@ const database = Object.create({}, {
     archive: {
         value: {
             3: {
-                title: "",
-                description: "",
-                dueDate: "",
-                dateCompleted: "",
+                title: "test",
+                description: "find the answer",
+                dueDate: "09/09/2020",
+                dateCompleted: "09/10/2020",
                 category: "uncategorized",
                 id: 3
             }
