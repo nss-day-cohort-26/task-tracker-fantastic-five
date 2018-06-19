@@ -11,7 +11,7 @@ function drop(ev, el) {
     var data = ev.dataTransfer.getData("text");
     if (el.id === "To-Do") {
         alert("Cant do that")
-    }  else   
+    }  else
     el.appendChild(document.getElementById(data));
 }
 
