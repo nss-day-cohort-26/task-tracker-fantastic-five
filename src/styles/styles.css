@@ -1,3 +1,14 @@
+/* color pallette
+bluish-white: #FCFCFC;
+dark-gray: #4C5454;
+light-blue: hsl(217, 71%, 53%);
+dark-blue: #29335C
+red: rgb(255, 89, 100);
+yellow: rgb(255, 231, 76);
+green: rgb(167, 297, 75)
+bright-pink: #B8336A
+*/
+
 .navbar {
     background-color: #FCFCFC;
 }
