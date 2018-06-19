@@ -8,9 +8,7 @@ const createCardButton = () => {
     let description = document.getElementById("descriptionInput").value;
     let dueDate = document.getElementById("dueDateInput").value;
     console.log(dueDate.slice(6))
-    // let category = document.getElementById("categoryInput").value;
-
-    console.log("hello")
+    let category = document.getElementById("taskDropDown").value;
 
     let valid = true;
 
@@ -71,7 +69,7 @@ const createCardButton = () => {
         newCard.description = description;
         newCard.dueDate = dueDate;
         newCard.dateCompleted = "";
-        newCard.category = "uncategorized"; //fix this later
+        newCard.category = category; //fix this later
         newCard.id = database.currentId += 1;
 
         database.toDo[newCard.id] = newCard
@@ -79,10 +77,16 @@ const createCardButton = () => {
 
         createCard(newCard, "toDo")
     } else {
-        alert("Invalid input")
+        if ((title === "") && (description === "") &&  (dueDate === "")) {
+            alert("Invalid input");
+        } else if (title === "") {
+            alert("Please add a Title for your task");
+        } else if (description === "") {
+            alert("Please add a Description for your task");
+        } else if (dueDate === "") {
+            alert("Please add a Due Date for your task");
+        }
     }
 }
-
-
 
 module.exports = createCardButton;

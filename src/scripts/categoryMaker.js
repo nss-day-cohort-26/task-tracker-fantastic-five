@@ -1,21 +1,17 @@
-const database = require("./database")
-const modal = require("./modal")
+const database = require("./database");
+const saveDatabase = require("./saveLocal");
 
 const categoryMaker = () => {
-
     let categoryInput = document.getElementById("categoryInput").value;
-    database.categories.push(categoryInput);
 
-    const taskDropDown = document.querySelector("#taskDropDown");
-
-    for (let i = 0; i < categories.length; i++) {
-        let options = categories[i];
-        let optionEl = document.createElement("option");
-        optionEl.innerHTML = options;
-        optionEl.value = options;
-        taskDropDown.appendChild(optionEl);
-
+    if (categoryInput === "") {
+        alert("Please add a Category Name.")
+    } else {
+        database.categories.push(categoryInput);
+        alert(`${categoryInput} has been added to your List of Categories!`);
     }
+
+    saveDatabase(database, "database");
 
 };
 
