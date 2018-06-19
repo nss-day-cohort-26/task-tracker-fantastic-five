@@ -12,14 +12,14 @@ taskBtn.addEventListener("click", () => {
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <p>Name: </p><input id="taskInput" type="text"> 
+        <p>Name: </p><input id="taskInput" type="text">
         <br>
         <p>Description: </p><input id="descriptionInput" type="text">
         <br>
         <p>Due Date </p><input id="dueDateInput" type="text">
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success">Submit</button>
+        <button class="button is-success" id="taskSubmit">Submit</button>
         <select>
             <option value="item1">Uncategorize</option>
             <option value="item2">Item2</option>
@@ -40,7 +40,7 @@ categoryBtn.addEventListener("click", () => {
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <p>Name: </p><input id="categoryInput" type="text"> 
+        <p>Name: </p><input id="categoryInput" type="text">
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success">Submit</button>
@@ -48,3 +48,5 @@ categoryBtn.addEventListener("click", () => {
     </div>`;
   modal.classList.add("is-active");
 });
+
+module.exports = taskBtnCreator

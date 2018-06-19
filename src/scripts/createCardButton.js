@@ -2,11 +2,12 @@ const database = require("./database")
 const createCard = require("./createCard")
 const makeDate = require("./makeDate")
 
-
+let taskSubmit = document.getElementById("taskSubmit")
+console.log(taskSubmit)
 
 
 const createCardButton = () => {
-    let title = document.getElementById("titleInput").value;
+    let title = document.getElementById("taskInput").value;
     let description = document.getElementById("descriptionInput").value;
     let dueDate = document.getElementById("dueDateInput").value;
     let category = document.getElementById("categoryInput").value; //not sure how to target this
@@ -72,7 +73,7 @@ const createCardButton = () => {
     }
 }
 
-console.log(createCardButton("homework", "stuff", "04/07/1990"))
-console.log(database)
+
+
 
 module.exports = createCardButton;
