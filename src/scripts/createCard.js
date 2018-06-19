@@ -4,7 +4,7 @@ const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
-    // createCardDiv.addEventListener("click", dragCard)
+    createCardDiv.addEventListener("click", dragCard)
 
     let nameP = document.createElement("p")
     nameP.textContent = obj.title

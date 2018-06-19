@@ -42,7 +42,7 @@ const taskBtn = document.querySelector("#createTask");
 
 };
 
-taskBtnCreator();
+
 
 // Category Creator
 
@@ -64,7 +64,7 @@ const categoryBtnCreator = () => {
           <button class="button is-success" id="categorySubmit">Submit</button>
         </footer>
       </div>`;
-    modal1.classList.add("is-active");
+    modal2.classList.add("is-active");
 
     // Remove Modal from Screen
     document.querySelector(".delete").addEventListener("click", () => {
@@ -75,4 +75,5 @@ const categoryBtnCreator = () => {
 
 };
 
-categoryBtnCreator();
+
+module.exports = {categoryBtnCreator, taskBtnCreator}
