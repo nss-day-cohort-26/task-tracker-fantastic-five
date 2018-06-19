@@ -17,4 +17,4 @@ const dragFunc = {
     }
 }
 
-module.exports = dragFunc 
+module.exports = dragFunc

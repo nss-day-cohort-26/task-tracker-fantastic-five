@@ -12,22 +12,23 @@ const taskBtn = document.querySelector("#createTask");
   // Add Modal to Screen
 
   taskBtn.addEventListener("click", () => {
-    modal.innerHTML = `<div class="modal-background"></div>
+    modal.innerHTML = `<div class="modal-background has-text-centered"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title has-text-centered">Create a Task</p>
         <button class="delete" aria-label="close"></button>
       </header>
-      <section class="modal-card-body">
+      <section class="modal-card-body has-text-centered">
         <p>Name: </p><input id="taskInput" type="text">
         <br>
         <p>Description: </p><input id="descriptionInput" type="text">
         <br>
-        <p>Due Date </p><input id="dueDateInput" type="text">
+        <p>Due Date: </p><input id="dueDateInput" type="text">
+        <br>
+        <p>Category: </p><select id="taskDropDown"></select>
       </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success" id="taskSubmit">Submit</button>
-        <select id="taskDropDown"></select>
+      <footer class="modal-card-foot buttons is-centered">
+        <button class="button is-link" id="taskSubmit">Submit</button>
       </footer>
     </div>`;
     modal.classList.add("is-active");
@@ -55,7 +56,6 @@ const taskBtn = document.querySelector("#createTask");
 
 };
 
-
 // Category Creator
 
 const categoryBtnCreator = () => {
@@ -68,16 +68,16 @@ const categoryBtnCreator = () => {
   categoryBtn.addEventListener("click", () => {
 
     modal2.innerHTML = `<div class="modal-background"></div>
-      <div class="modal-card">
+      <div class="modal-card is-info">
         <header class="modal-card-head">
           <p class="modal-card-title has-text-centered">Create a Category</p>
           <button class="delete" aria-label="close"></button>
         </header>
-        <section class="modal-card-body">
+        <section class="modal-card-body has-text-centered">
           <p>Name: </p><input id="categoryInput" type="text">
         </section>
-        <footer class="modal-card-foot">
-          <button class="button is-success" id="categorySubmit">Submit</button>
+        <footer class="modal-card-foot buttons is-centered">
+          <button class="button is-link" id="categorySubmit">Submit</button>
         </footer>
       </div>`;
     modal2.classList.add("is-active");
