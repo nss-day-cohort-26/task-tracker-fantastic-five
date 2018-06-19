@@ -1,6 +1,6 @@
 /* color pallette
 bluish-white: #FCFCFC;
-dark-gray: #4C5454;
+gray: #899999;
 light-blue: hsl(217, 71%, 53%);
 dark-blue: #29335C
 red: rgb(255, 89, 100);
@@ -10,11 +10,11 @@ bright-pink: #B8336A
 */
 
 .navbar {
-    background-color: #FCFCFC;
+    background-color: #29335C;
 }
 
 html {
-    background-color: #4C5454
+    background-color: #899999
 }
 
 .column {
@@ -24,15 +24,14 @@ html {
     margin: 1%;
     margin-top: 3%;
     border-radius: 10px;
-    height: 650px
+    height: 650px;
 }
 
-#To-Do * {
+#toDo * {
     background-color: rgba(255, 89, 100, .6);
     border-radius: 10px;
     border: rgb(255, 89, 100) solid 3px;
     box-shadow: 3px 3px #888888;
-
 }
 
 #doing * {
