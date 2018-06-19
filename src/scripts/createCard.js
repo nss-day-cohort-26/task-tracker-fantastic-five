@@ -1,6 +1,7 @@
 const makeDate = require("./makeDate")
 const archiveMode = requre("./archiveMode")
 
+
 const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")

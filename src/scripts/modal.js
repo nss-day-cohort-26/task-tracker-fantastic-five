@@ -17,7 +17,7 @@ const taskBtn = document.querySelector("#createTask");
         <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <p>Name: </p><input id="taskInput" type="text"> 
+        <p>Name: </p><input id="taskInput" type="text">
         <br>
         <p>Description: </p><input id="descriptionInput" type="text">
         <br>
@@ -42,15 +42,16 @@ const taskBtn = document.querySelector("#createTask");
 
 };
 
-taskBtnCreator();
+
 
 // Category Creator
 
 const categoryBtnCreator = () => {
   const categoryBtn = document.querySelector("#createCategory");
+  const modal2 = document.querySelector(".modal");
   // Add Modal to Screen
   categoryBtn.addEventListener("click", () => {
-    modal.innerHTML = `<div class="modal-background"></div>
+    modal2.innerHTML = `<div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">Create a Category</p>
@@ -63,15 +64,16 @@ const categoryBtnCreator = () => {
           <button class="button is-success" id="categorySubmit">Submit</button>
         </footer>
       </div>`;
-    modal.classList.add("is-active");
+    modal2.classList.add("is-active");
 
     // Remove Modal from Screen
     document.querySelector(".delete").addEventListener("click", () => {
-      modal.classList.remove("is-active");
+      modal2.classList.remove("is-active");
     });
 
   });
 
 };
 
-categoryBtnCreator();
+
+module.exports = {categoryBtnCreator, taskBtnCreator}

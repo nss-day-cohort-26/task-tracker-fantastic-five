@@ -8,6 +8,8 @@ const createCardButton = () => {
     let dueDate = document.getElementById("dueDateInput").value;
     let category = document.getElementById("categoryInput").value;
 
+    console.log(title)
+
     let valid = true;
 
     if (title.length < 1) {
