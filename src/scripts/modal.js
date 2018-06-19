@@ -1,4 +1,5 @@
 const createCardButton = require("./createCardButton");
+const categoryMaker = require("./categoryMaker");
 
 // Task Creator
 
@@ -46,10 +47,15 @@ const taskBtn = document.querySelector("#createTask");
 // Category Creator
 
 const categoryBtnCreator = () => {
-  const categoryBtn = document.querySelector("#createCategory");
+
   const modal2 = document.querySelector(".modal");
+  const categoryBtn = document.querySelector("#createCategory");
+  console.log(categoryBtn);
+
   // Add Modal to Screen
+
   categoryBtn.addEventListener("click", () => {
+
     modal2.innerHTML = `<div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
@@ -64,6 +70,9 @@ const categoryBtnCreator = () => {
         </footer>
       </div>`;
     modal2.classList.add("is-active");
+
+  const categorySubmit = document.querySelector("#categorySubmit");
+  categorySubmit.addEventListener("click", categoryMaker);
 
     // Remove Modal from Screen
     document.querySelector(".delete").addEventListener("click", () => {
