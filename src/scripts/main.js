@@ -8,11 +8,27 @@ const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
 
-loadDatabase("database")
-archiveMode()
+if(localStorage.getItem("mykey") !== null){
+    loadDatabase()
+}
+
+console.log("Loaded databse:", database)
+
 DOMTaskBuilder()
 modalMaker.taskBtnCreator();
 modalMaker.categoryBtnCreator();
+
+database.toDo[9] = {
+    title: "Our first project",
+    description: "Digging for gold",
+    dueDate: "06/20/2018",
+    dateCompleted: "",
+    category: "uncategorized",
+    id: 9
+}
+
+saveDatabase();
+console.log(database)
 
 
 //run loadDatabase

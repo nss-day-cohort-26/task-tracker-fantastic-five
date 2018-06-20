@@ -1,8 +1,9 @@
-const database = require("./database")
+var database = require("./database")
 
-const loadDatabase = localStorageKey => {
-    const databaseString = localStorage.getItem(localStorageKey)
-    return JSON.parse(databaseString)
+const loadDatabase = function(){
+    console.log("loading")
+    let databaseString = localStorage.getItem("mykey")
+    database = JSON.parse(databaseString);
 }
 
 module.exports = loadDatabase
