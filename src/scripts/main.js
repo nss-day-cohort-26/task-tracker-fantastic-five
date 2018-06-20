@@ -7,20 +7,23 @@ const modalMaker = require("./modal")
 const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
+const createCard = require("./createCard")
 const graphs = require("./graphs")
 
-saveDatabase(database);
 
 if(localStorage.getItem("mykey") !== null){
     console.log("database loads")
     database = loadDatabase()
 }
 
-console.log("Loaded databse:", database)
+console.log("Loaded database:", database)
 
 DOMTaskBuilder()
 modalMaker.taskBtnCreator();
 modalMaker.categoryBtnCreator();
+// createCard(database, "toDo")
+// createCard(database, "doing")
+// createCard(database, "done")
 
 console.log(database)
 
