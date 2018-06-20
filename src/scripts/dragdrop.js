@@ -1,22 +1,20 @@
-const allowDrop = (ev) => {
-    ev.preventDefault();
+const allowDrop = (event) => {
+    event.preventDefault();
  }
 
-const drag = (ev) => {
-    ev.dataTransfer.setData("text", ev.target.id);
+const drag = (event) => {
+    event.dataTransfer.setData("text", event.target.id);
  }
 
-const drop = (ev, el) => {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    if (el.id === "toDo") {
-        alert("Cant do that")
-    }  else
-    el.appendChild(document.getElementById(data));
+const drop = () => {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    // if (el.id === "toDo") {
+    //     alert("Cant do that")
+    // }  else
+    this.appendChild(document.getElementById(data));
  }
 
-<<<<<<< HEAD
+
  module.exports = {allowDrop, drag, drop}
-=======
-module.exports = dragFunc
->>>>>>> master
+

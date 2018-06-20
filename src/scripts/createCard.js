@@ -7,8 +7,8 @@ const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
-    createCardDiv.setAttribute("draggable", "true")
     createCardDiv.setAttribute("click", dragDrop.drag)
+    createCardDiv.setAttribute("draggable", true)
 
     let nameP = document.createElement("p")
     nameP.textContent = obj.title
@@ -63,6 +63,7 @@ const createCard = (obj, targetId) => {
     console.log(document.getElementById(targetId))
 
     document.getElementById(targetId).appendChild(createCardDiv)
+
 }
 
 
