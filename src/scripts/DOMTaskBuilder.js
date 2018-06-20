@@ -20,20 +20,20 @@ const DOMTaskBuilder = () => {
     //creates To-Do column with header and appends to columns div
     let divColumn1 = document.createElement("div");
 
-    divColumn1.setAttribute("ondrop", dragDrop.drop(event, this))
-    divColumn1.setAttribute("ondragover", dragDrop.allowDrop(event))
 
     divColumn1.className = "column"
     divColumn1.id = "toDo"
     let divColumn1H3 = document.createElement("h3");
     divColumn1H3.textContent = "To-Do";
+    divColumn1.setAttribute("ondrop", dragDrop.drop)
+    divColumn1.setAttribute("ondragover", dragDrop.allowDrop)
     divColumn1.appendChild(divColumn1H3);
     divColumns.appendChild(divColumn1);
 
 //creates Doing column with header and appends to columns div
     let divColumn2 = document.createElement("div");
-    divColumn2.setAttribute("ondrop", dragDrop.drop(event, this))
-    divColumn2.setAttribute("ondragover", dragDrop.allowDrop(event))
+    divColumn2.setAttribute("ondrop", dragDrop.drop)
+    divColumn2.setAttribute("ondragover", dragDrop.allowDrop)
     divColumn2.className = "column"
     divColumn2.id = "doing"
     let divColumn2H3 = document.createElement("h3");
@@ -43,8 +43,8 @@ const DOMTaskBuilder = () => {
 
     //creates done column with header and appends to columns div
     let divColumn3 = document.createElement("div");
-    divColumn3.setAttribute("ondrop", dragDrop.drop(event, this))
-    divColumn3.setAttribute("ondragover", dragDrop.allowDrop(event))
+    divColumn3.setAttribute("ondrop", dragDrop.drop)
+    divColumn3.setAttribute("ondragover", dragDrop.allowDrop)
     divColumn3.className = "column"
     divColumn3.id = "done"
     let divColumn3H3 = document.createElement("h3");
