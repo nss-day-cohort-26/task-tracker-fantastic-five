@@ -7,8 +7,15 @@ const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
-    createCardDiv.setAttribute("click", dragDrop.drag)
+    createCardDiv.ondragstart = dragDrop.drag
     createCardDiv.setAttribute("draggable", true)
+
+    createCardDiv.setAttribute("class", "test")
+    // createCardDiv.ondragstart = (event) => { //ondragstart attached to task
+    //     console.log("drag started");
+    //     event.dataTransfer.setData("text", event.target.classList);d
+
+    // }
 
     let nameP = document.createElement("p")
     nameP.textContent = obj.title

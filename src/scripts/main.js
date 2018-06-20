@@ -8,8 +8,6 @@ const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
 
-
-saveDatabase(database, "database")
 loadDatabase("database")
 archiveMode()
 DOMTaskBuilder()
