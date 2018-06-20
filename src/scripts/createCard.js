@@ -18,21 +18,25 @@ const createCard = (obj, targetId) => {
     // }
 
     let nameP = document.createElement("p")
-    nameP.textContent = obj.title
+    nameP.textContent = `Name: ${obj.title}`
     createCardDiv.appendChild(nameP)
 
     let descP = document.createElement("p")
-    descP.textContent = obj.description
+    descP.textContent = `Description: ${obj.description}`
     createCardDiv.appendChild(descP)
 
 
     let dueDateP = document.createElement("p")
-    dueDateP.textContent = obj.dueDate
+    dueDateP.textContent = `Due Date: ${obj.dueDate}`
     createCardDiv.appendChild(dueDateP)
 
     let categoryP = document.createElement("p")
-    categoryP.textContent = obj.category
+    categoryP.textContent = `Category: ${obj.category}`
     createCardDiv.appendChild(categoryP)
+
+    let timeStampP = document.createElement("p");
+    timeStampP.textContent = `Date Created: ${makeDate()}`;
+    createCardDiv.appendChild(timeStampP);
 
     //if the current date is past the due date create an overdue paragraph tag
     let myDate = makeDate();
