@@ -1,7 +1,8 @@
 let loadDatabase = require("./loadLocal");
 const createCard = require("./createCard");
 const dragDrop = require("./dragDrop")
-var database = require("./database")
+
+let database = require("./database")
 console.log(dragDrop);
 
 
@@ -11,6 +12,7 @@ const DOMTaskBuilder = () => {
         console.log("database loads")
         database = loadDatabase()
     }
+
     //get Div element in HTML
     let mainDiv = document.querySelector("#dom-output")
     mainDiv.innerHTML=""
