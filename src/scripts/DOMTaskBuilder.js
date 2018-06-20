@@ -1,13 +1,13 @@
 let loadDatabase = require("./loadLocal");
 const createCard = require("./createCard");
 const dragDrop = require("./dragDrop")
+
 let database = require("./database")
 console.log(dragDrop);
 
 
 //DOM creator
 const DOMTaskBuilder = () => {
-
     if(localStorage.getItem("mykey") !== null){
         console.log("database loads")
         database = loadDatabase()
