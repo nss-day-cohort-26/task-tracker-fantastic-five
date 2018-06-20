@@ -26,7 +26,7 @@ const taskBtn = document.querySelector("#createTask");
         <br>
         <p>Due Date: </p><input id="dueDateInput" type="text">
         <br>
-        <p>Category: </p><select id="taskDropDown"></select>
+        <p>Category <i>( optional )</i>: </p><select id="taskDropDown"></select>
       </section>
       <footer class="modal-card-foot buttons is-centered">
         <button class="button is-link" id="taskSubmit">Submit</button>
@@ -41,7 +41,6 @@ const taskBtn = document.querySelector("#createTask");
       let optionEl = document.createElement("option");
       optionEl.innerHTML = options;
       optionEl.value = options;
-      console.log("Option: ", optionEl)
       taskDropDown.appendChild(optionEl)
   }
 

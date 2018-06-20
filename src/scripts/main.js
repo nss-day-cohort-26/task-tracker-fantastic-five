@@ -12,8 +12,10 @@ const graphs = require("./graphs")
 
 
 if(localStorage.getItem("mykey") !== null){
+
     console.log("database loads")
     database = loadDatabase()
+
 }
 
 console.log("Loaded database:", database)
