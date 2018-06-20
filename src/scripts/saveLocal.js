@@ -1,8 +1,8 @@
-const database = require("./database")
+let database = require("./database")
 
-const saveDatabase = () => {
+const saveDatabase = (db) => {
     console.log("saving")
-    const stringifiedDatabase = JSON.stringify(database)
+    const stringifiedDatabase = JSON.stringify(db)
     localStorage.setItem("mykey", stringifiedDatabase)
 }
 

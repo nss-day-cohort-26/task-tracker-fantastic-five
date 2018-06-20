@@ -1,5 +1,5 @@
 
-const database = require("./database")
+var database = require("./database")
 const saveDatabase = require("./saveLocal")
 const loadDatabase = require("./loadLocal")
 const DOMTaskBuilder = require("./DOMTaskBuilder")
@@ -9,7 +9,10 @@ const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
 
 if(localStorage.getItem("mykey") !== null){
-    loadDatabase();
+
+    console.log("database loads")
+    database = loadDatabase()
+
 }
 
 console.log("Loaded databse:", database)
@@ -27,7 +30,6 @@ database.toDo[9] = {
     id: 9
 }
 
-saveDatabase();
 console.log(database)
 
 

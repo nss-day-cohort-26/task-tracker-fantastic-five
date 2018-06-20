@@ -1,4 +1,4 @@
-const database = require("./database");
+let loadDatabase = require("./loadLocal");
 const createCard = require("./createCard");
 const dragDrop = require("./dragDrop")
 console.log(dragDrop);
@@ -6,6 +6,7 @@ console.log(dragDrop);
 
 //DOM creator
 const DOMTaskBuilder = () => {
+    database = loadDatabase();
     //get Div element in HTML
     let mainDiv = document.querySelector("#dom-output")
     mainDiv.innerHTML=""
