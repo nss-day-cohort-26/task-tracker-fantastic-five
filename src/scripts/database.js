@@ -1,4 +1,4 @@
-const database = Object.create({}, {
+var database = Object.create({}, {
     toDo: {
         value: {
             0: {
@@ -56,7 +56,7 @@ const database = Object.create({}, {
         enumerable: true,
     },
     categories: {
-        value: [],
+        value: ["uncategorized"],
         writable: true,
         enumerable: true
     },
