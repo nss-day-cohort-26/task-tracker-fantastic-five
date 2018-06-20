@@ -11,7 +11,7 @@ const categoryMaker = () => {
         alert(`${categoryInput} has been added to your List of Categories!`);
     }
 
-    saveDatabase(database, "database");
+    saveDatabase();
 
 };
 

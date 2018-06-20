@@ -73,7 +73,7 @@ const createCardButton = () => {
         newCard.id = database.currentId += 1;
 
         database.toDo[newCard.id] = newCard
-        saveDatabase(database, "database")
+        saveDatabase()
 
         createCard(newCard, "toDo")
     } else {

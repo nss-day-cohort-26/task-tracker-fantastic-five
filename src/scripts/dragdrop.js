@@ -26,7 +26,7 @@ const drop = function(event) { //attached to column
 
     database[event.target] = event;
     console.log(event.target)
-    saveDatabase(database, "database")
+    saveDatabase()
 }
 
 // let targets = document.querySelector(".column");
