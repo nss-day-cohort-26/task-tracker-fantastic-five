@@ -14,7 +14,7 @@ if(localStorage.getItem("mykey") !== null){
     database = loadDatabase()
 }
 
-console.log("Loaded databse:", database)
+console.log("Loaded database:", database)
 
 DOMTaskBuilder()
 modalMaker.taskBtnCreator();
