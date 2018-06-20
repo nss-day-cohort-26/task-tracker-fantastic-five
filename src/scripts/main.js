@@ -9,7 +9,6 @@ const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
 const graphs = require("./graphs")
 
-saveDatabase(database);
 
 if(localStorage.getItem("mykey") !== null){
     console.log("database loads")

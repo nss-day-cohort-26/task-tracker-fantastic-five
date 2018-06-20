@@ -65,7 +65,7 @@ var database = Object.create({}, {
         enumerable: true
     },
     currentId: {
-        value: 4
+        value: 9
     }
 
 });
