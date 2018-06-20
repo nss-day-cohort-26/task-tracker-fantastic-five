@@ -49,6 +49,12 @@ const drop = function(event) { //attached to column
         if(database.done[item].id.toString() === myId){
             myObj = database.done[item];
             delete database.done[item]
+            let targetDiv = event.target.lastChild
+            let archiveBtn = document.createElement("button")
+            archiveBtn.type = "button";
+            archiveBtn.addEventListener("click", archiveMode)
+            archiveBtn.textContent = "Archive"
+            targetDiv.appendChild(archiveBtn)
         }
     }
 

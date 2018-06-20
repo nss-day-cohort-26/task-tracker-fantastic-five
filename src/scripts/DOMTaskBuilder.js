@@ -13,7 +13,6 @@ const DOMTaskBuilder = () => {
         database = loadDatabase()
     }
 
-    }
     //get Div element in HTML
     let mainDiv = document.querySelector("#dom-output")
     mainDiv.innerHTML=""
