@@ -15,8 +15,4 @@ const drop = (ev, el) => {
     el.appendChild(document.getElementById(data));
  }
 
-<<<<<<< HEAD
  module.exports = {allowDrop, drag, drop}
-=======
-module.exports = dragFunc
->>>>>>> master

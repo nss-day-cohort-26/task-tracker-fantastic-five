@@ -7,7 +7,7 @@ const createCard = (obj, targetId) => {
 
     let createCardDiv = document.createElement("div")
     createCardDiv.id = obj.id
-    createCardDiv.setAttribute("draggable", "true")
+    createCardDiv.setAttribute("draggable", true)
     createCardDiv.setAttribute("click", dragDrop.drag)
 
     let nameP = document.createElement("p")
