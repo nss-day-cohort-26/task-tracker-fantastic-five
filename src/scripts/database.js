@@ -7,7 +7,8 @@ var database = Object.create({}, {
                 dueDate: "06/19/2018",
                 dateCompleted: "",
                 category: "uncategorized",
-                id: 0
+                id: 0,
+                assignedDate: "06/19/2017",
             }
         },
         writable: true,
@@ -21,7 +22,8 @@ var database = Object.create({}, {
                 dueDate: "06/18/2018",
                 dateCompleted: "",
                 category: "uncategorized",
-                id: 1
+                id: 1,
+                assignedDate: "06/19/2017"
             }
         },
         writable: true,
@@ -35,7 +37,8 @@ var database = Object.create({}, {
                 dueDate: "06/20/2018",
                 dateCompleted: "",
                 category: "uncategorized",
-                id: 2
+                id: 2,
+                assignedDate: "06/19/2017"
             }
         },
         writable: true,
@@ -49,7 +52,8 @@ var database = Object.create({}, {
                 dueDate: "09/09/2020",
                 dateCompleted: "09/10/2020",
                 category: "uncategorized",
-                id: 3
+                id: 3,
+                assignedDate: "06/19/2017"
             }
         },
         writable: true,

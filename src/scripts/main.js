@@ -7,6 +7,9 @@ const modalMaker = require("./modal")
 const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
+const graphs = require("./graphs")
+
+saveDatabase(database);
 
 if(localStorage.getItem("mykey") !== null){
     console.log("database loads")
@@ -19,17 +22,10 @@ DOMTaskBuilder()
 modalMaker.taskBtnCreator();
 modalMaker.categoryBtnCreator();
 
-database.toDo[9] = {
-    title: "Our first project",
-    description: "Digging for gold",
-    dueDate: "06/20/2018",
-    dateCompleted: "",
-    category: "uncategorized",
-    id: 9
-}
-
 console.log(database)
 
+document.getElementById("insights").addEventListener("click", graphs)
+document.getElementById("archives").addEventListener("click", archiveMode)
 
 //run loadDatabase
 //assign event listeners to nav
