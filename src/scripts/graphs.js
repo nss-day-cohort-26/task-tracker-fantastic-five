@@ -1,4 +1,4 @@
-const database = require("./database")
+let database = require("./database")
 
 function graphs() {
     console.log("graph runs")
