@@ -1,13 +1,13 @@
-const database = require("./database")
+let database = require("./database")
 const createCard = require("./createCard")
 const makeDate = require("./makeDate")
 const saveDatabase = require("./saveLocal")
 
 const createCardButton = () => {
+    console.log("Createcardbutton runs")
     let title = document.getElementById("taskInput").value;
     let description = document.getElementById("descriptionInput").value;
     let dueDate = document.getElementById("dueDateInput").value;
-    console.log(dueDate.slice(6))
     let category = document.getElementById("taskDropDown").value;
 
     let valid = true;
@@ -73,7 +73,7 @@ const createCardButton = () => {
         newCard.id = database.currentId += 1;
 
         database.toDo[newCard.id] = newCard
-        saveDatabase(database, "database")
+        saveDatabase(database)
 
         createCard(newCard, "toDo")
     } else {
@@ -85,6 +85,8 @@ const createCardButton = () => {
             alert("Please add a Description for your task");
         } else if (dueDate === "") {
             alert("Please add a Due Date for your task");
+        } else {
+            alert("Invalid input")
         }
     }
 }

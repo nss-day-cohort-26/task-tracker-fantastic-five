@@ -1,4 +1,4 @@
-const database = require("./database");
+let database = require("./database");
 const saveDatabase = require("./saveLocal");
 
 const categoryMaker = () => {
@@ -11,7 +11,8 @@ const categoryMaker = () => {
         alert(`${categoryInput} has been added to your List of Categories!`);
     }
 
-    saveDatabase(database, "database");
+    console.log("categoryMaker saves database")
+    saveDatabase();
 
 };
 
