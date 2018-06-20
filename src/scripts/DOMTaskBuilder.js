@@ -1,12 +1,18 @@
 let loadDatabase = require("./loadLocal");
 const createCard = require("./createCard");
 const dragDrop = require("./dragDrop")
+
+let database = require("./database")
 console.log(dragDrop);
 
 
 //DOM creator
 const DOMTaskBuilder = () => {
-    database = loadDatabase();
+    if(localStorage.getItem("mykey") !== null){
+        console.log("database loads")
+        database = loadDatabase()
+    }
+
     //get Div element in HTML
     let mainDiv = document.querySelector("#dom-output")
     mainDiv.innerHTML=""

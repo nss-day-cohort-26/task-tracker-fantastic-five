@@ -1,9 +1,15 @@
-let database = require("./database")
 const createCard = require("./createCard")
 const makeDate = require("./makeDate")
 const saveDatabase = require("./saveLocal")
+const loadDatabase = require("./loadLocal")
+let database = require("./database")
+
 
 const createCardButton = () => {
+    if(localStorage.getItem("mykey") !== null){
+        console.log("database loads")
+        database = loadDatabase()
+    }
     console.log("Createcardbutton runs")
     let title = document.getElementById("taskInput").value;
     let description = document.getElementById("descriptionInput").value;
@@ -70,9 +76,17 @@ const createCardButton = () => {
         newCard.dueDate = dueDate;
         newCard.dateCompleted = "";
         newCard.category = category; //fix this later
-        newCard.id = database.currentId += 1;
+        newCard.id = database.currentId;
 
         database.toDo[newCard.id] = newCard
+        if(database.currentId.isNaN){
+            let p = parseInt(database.currentId)
+        } else {
+            p = database.currentId;
+        }
+        p++
+        database.currentId = p;
+
         saveDatabase(database)
 
         createCard(newCard, "toDo")
