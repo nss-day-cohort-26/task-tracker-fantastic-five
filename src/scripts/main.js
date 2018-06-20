@@ -8,12 +8,16 @@ const archiveMode = require("./archiveMode")
 const categoryMaker = require("./categoryMaker");
 const dragDrop = require("./dragDrop")
 
-loadDatabase("database")
+let localStorage = loadDatabase("database")
+if(!localStorage) {
+    localStorage = {}
+    saveDatabase(database, "database")
+}
+
 archiveMode()
 DOMTaskBuilder()
 modalMaker.taskBtnCreator();
 modalMaker.categoryBtnCreator();
-
 
 //run loadDatabase
 //assign event listeners to nav
