@@ -216,9 +216,9 @@ function graphs() {
     let newObj = { categories: [] }
 
     let timeToComplete = function (obj) {
-        let assignedYear = obj.dateAssigned.slice(6, 10);
-        let assignedDay = obj.dateAssigned.slice(3, 5);
-        let assignedMonth = obj.dateAssigned.slice(0, 2);
+        let assignedYear = obj.assignedDate.slice(6, 10);
+        let assignedDay = obj.assignedDate.slice(3, 5);
+        let assignedMonth = obj.assignedDate.slice(0, 2);
 
         let comYear = obj.dateCompleted.slice(6, 10);
         let comDay = obj.dateCompleted.slice(3, 5);
@@ -253,11 +253,11 @@ function graphs() {
         }
 
         while (assignedDay < comDay) {
-            day++;
+            days++;
             assignedDay++;
         }
         while (assignedDay > comDay) {
-            day--;
+            days--;
             assignedDay--;
         }
         return days;
