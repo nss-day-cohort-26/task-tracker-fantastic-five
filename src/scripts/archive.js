@@ -4,7 +4,7 @@ const saveDatabase = require("./saveLocal")
 
 const archive = (id) => {
     console.log("archive btn")
-    console.log("id:" id)
+    console.log("id:", id)
     if(localStorage.getItem("mykey") !== null){
 
         console.log("database loads")

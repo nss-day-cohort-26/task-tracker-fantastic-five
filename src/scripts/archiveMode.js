@@ -1,7 +1,11 @@
-const database = require("./database")
+var database = require("./database")
 const createCard = require("./createCard")
+var loadDatabase = require("./loadLocal")
 
 const archiveMode = function(){
+    if(localStorage.getItem("mykey") !== null){
+        database = loadDatabase()
+    }
     const archiveBtn = document.querySelector("#archives")
     archiveBtn.addEventListener("click", () => {
         document.getElementById("dom-output").innerHTML = "";

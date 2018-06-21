@@ -76,16 +76,16 @@ const createCardButton = () => {
         newCard.dueDate = dueDate;
         newCard.dateCompleted = "";
         newCard.category = category; //fix this later
-        newCard.id = database.currentId;
+        newCard.id = database.currentId +=1;
 
         database.toDo[newCard.id] = newCard
-        if(database.currentId.isNaN){
-            let p = parseInt(database.currentId)
-        } else {
-            p = database.currentId;
-        }
-        p++
-        database.currentId = p;
+        // if(database.currentId.isNaN){
+        //     let p = parseInt(database.currentId)
+        // } else {
+        //     p = database.currentId;
+        // }
+        // p++
+        // database.currentId = p;
 
         saveDatabase(database)
 

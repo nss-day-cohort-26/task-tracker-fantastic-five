@@ -67,7 +67,7 @@ const createCard = (obj, targetId) => {
     if (targetId === "done") {
         let archiveBtn = document.createElement("button")
         archiveBtn.type = "button";
-        archiveBtn.addEventListener("click", archiveMode)
+        archiveBtn.addEventListener("click", function(){archive(obj.id)})
         archiveBtn.textContent = "Archive"
         createCardDiv.appendChild(archiveBtn)
     }
