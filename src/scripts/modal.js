@@ -1,11 +1,18 @@
 const createCardButton = require("./createCardButton");
 const categoryMaker = require("./categoryMaker");
 var database = require("./database");
-
+var loadDatabase = require("./loadLocal")
+var saveDatabase = require("./saveLocal")
 
 // Task Creator
 
 const taskBtnCreator = () => {
+  if(localStorage.getItem("mykey") !== null){
+
+    console.log("database loads")
+    database = loadDatabase()
+
+}
 
 const modal = document.querySelector(".modal");
 const taskBtn = document.querySelector("#createTask");
@@ -53,7 +60,7 @@ const taskBtn = document.querySelector("#createTask");
     });
 
   });
-
+  saveLocal(database);
 };
 
 // Category Creator
