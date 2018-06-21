@@ -1,8 +1,8 @@
 const makeDate = require("./makeDate")
+const currentDate = require("./makeDate")
 const archiveMode = require("./archiveMode")
 const dragDrop = require("./dragDrop")
 const archive = require("./archive")
-
 
 const createCard = (obj, targetId) => {
 
@@ -36,7 +36,7 @@ const createCard = (obj, targetId) => {
     createCardDiv.appendChild(categoryP)
 
     let timeStampP = document.createElement("p");
-    timeStampP.textContent = `Date Created: ${makeDate()}`;
+    timeStampP.textContent = `Date Created: ${currentDate()}`;
     createCardDiv.appendChild(timeStampP);
 
     //if the current date is past the due date create an overdue paragraph tag
@@ -72,7 +72,6 @@ const createCard = (obj, targetId) => {
         archiveBtn.textContent = "Archive"
         createCardDiv.appendChild(archiveBtn)
     }
-    console.log(document.getElementById(targetId))
 
     document.getElementById(targetId).appendChild(createCardDiv)
 

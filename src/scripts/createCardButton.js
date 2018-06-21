@@ -67,7 +67,7 @@ const createCardButton = () => {
     }
 
     if (valid === true) {
-        console.log("making new card")
+
 
         let newCard = Object.create(database.toDo);
 
@@ -91,7 +91,7 @@ const createCardButton = () => {
 
         createCard(newCard, "toDo")
     } else {
-        if ((title === "") && (description === "") &&  (dueDate === "")) {
+        if ((title === "") && (description === "") && (dueDate === "")) {
             alert("Invalid input");
         } else if (title === "") {
             alert("Please add a Title for your task");

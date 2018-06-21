@@ -9,6 +9,7 @@ var saveDatabase = require("./saveLocal")
 const taskBtnCreator = () => {
   if(localStorage.getItem("mykey") !== null){
 
+
     console.log("database loads")
     database = loadDatabase()
 
@@ -60,7 +61,7 @@ const taskBtn = document.querySelector("#createTask");
     });
 
   });
-  saveLocal(database);
+  saveDatabase(database);
 };
 
 // Category Creator
