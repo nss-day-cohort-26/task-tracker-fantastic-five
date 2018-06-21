@@ -43,6 +43,8 @@ const drop = function(event) { //attached to column
             archiveBtn.textContent = "Archive"
             event.target.lastChild.appendChild(archiveBtn)
             console.log(event.target.lastChild.id)
+        } else if (document.querySelector(`.${data}`).lastChild.type === "button" ) {
+            document.querySelector(`.${data}`).removeChild(document.querySelector(`.${data}`).lastChild)
         }
         console.log("x: ", event.target.lastChild)
 
