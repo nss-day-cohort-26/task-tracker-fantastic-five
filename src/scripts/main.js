@@ -31,6 +31,7 @@ console.log(database)
 
 document.getElementById("insights").addEventListener("click", graphs)
 document.getElementById("archives").addEventListener("click", archiveMode)
+document.getElementById("createBtn").addEventListener("click", DOMTaskBuilder)
 
 //run loadDatabase
 //assign event listeners to nav
