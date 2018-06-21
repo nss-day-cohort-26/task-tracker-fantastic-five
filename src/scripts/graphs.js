@@ -1,6 +1,10 @@
 let database = require("./database")
+let loadDatabase = require("./loadLocal")
 
 function graphs() {
+    if(localStorage.getItem("mykey") !== null){
+        database = loadDatabase()
+    }
     console.log("graph runs")
     document.querySelector("#dom-output").innerHTML = "";
 
