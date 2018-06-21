@@ -8,7 +8,7 @@ var database = Object.create({}, {
                 dateCompleted: "",
                 category: "uncategorized",
                 id: 0,
-                assignedDate: "06/19/2017",
+                assignedDate: "06/19/2017"
             }
         },
         writable: true,
@@ -42,7 +42,7 @@ var database = Object.create({}, {
             }
         },
         writable: true,
-        enumerable: true,
+        enumerable: true
     },
     archive: {
         value: {
@@ -57,7 +57,7 @@ var database = Object.create({}, {
             }
         },
         writable: true,
-        enumerable: true,
+        enumerable: true
     },
     categories: {
         value: ["uncategorized"],
@@ -66,7 +66,8 @@ var database = Object.create({}, {
     },
     currentId: {
         value: 9,
-        writable: true
+        writable: true,
+        enumerable: true
     }
 
 });
