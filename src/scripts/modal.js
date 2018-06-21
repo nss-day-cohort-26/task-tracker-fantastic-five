@@ -61,7 +61,7 @@ const taskBtn = document.querySelector("#createTask");
     });
 
   });
-  saveLocal(database);
+  saveDatabase(database);
 };
 
 // Category Creator
