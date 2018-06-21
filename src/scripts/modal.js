@@ -6,6 +6,9 @@ var database = require("./database");
 // Task Creator
 
 const taskBtnCreator = () => {
+  if(localStorage.getItem("mykey") !== null){
+    database = loadDatabase()
+}
 
 const modal = document.querySelector(".modal");
 const taskBtn = document.querySelector("#createTask");
