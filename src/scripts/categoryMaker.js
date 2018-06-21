@@ -1,7 +1,14 @@
 let database = require("./database");
 const saveDatabase = require("./saveLocal");
+const loadDatabase = require("./loadLocal")
 
 const categoryMaker = () => {
+    if(localStorage.getItem("mykey") !== null){
+
+        console.log("database loads")
+        database = loadDatabase()
+
+    }
     let categoryInput = document.getElementById("categoryInput").value;
 
     if (categoryInput === "") {
@@ -12,7 +19,7 @@ const categoryMaker = () => {
     }
 
     console.log("categoryMaker saves database")
-    saveDatabase();
+    saveDatabase(database);
 
 };
 
