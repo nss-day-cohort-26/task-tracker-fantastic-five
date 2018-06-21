@@ -2,6 +2,7 @@ const makeDate = require("./makeDate")
 const currentDate = require("./makeDate")
 const archiveMode = require("./archiveMode")
 const dragDrop = require("./dragDrop")
+const archive = require("./archive")
 
 const createCard = (obj, targetId) => {
 

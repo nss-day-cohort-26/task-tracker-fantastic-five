@@ -1,6 +1,7 @@
 const makeDate = () => {
     let date = new Date();
     let month = date.getMonth();
+    month += 1;
     month = month.toString();
     date = date.toString();
 

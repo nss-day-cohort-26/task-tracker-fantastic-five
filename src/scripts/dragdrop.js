@@ -2,6 +2,7 @@ let database = require("./database")
 const saveDatabase = require("./saveLocal")
 let loadDatabase = require("./loadLocal")
 const archive = require("./archive")
+const makeDate = require("./makeDate")
 
 
 const drag = (event) => { //ondragstart attached to task
@@ -32,6 +33,8 @@ const drop = function(event) { //attached to column
 
         }
         event.target.appendChild(document.querySelector(`.${data}`))
+
+        console.log(event.target.lastChild.id.toString())
 
         if ( event.target.id === "done") {
             let archiveBtn = document.createElement("button")
@@ -70,7 +73,7 @@ const drop = function(event) { //attached to column
 
             }
         }
-
+        myObj.dateCompleted = makeDate();
         console.log(myObj)
         database[event.target.id][myId] = myObj;
         //Old task is being removed
