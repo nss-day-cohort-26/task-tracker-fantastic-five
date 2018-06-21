@@ -15,7 +15,7 @@ const categoryMaker = () => {
         alert("Please add a Category Name.")
     } else {
         database.categories.push(categoryInput);
-        alert(`${categoryInput} has been added to your List of Categories!`);
+        alert(`${categoryInput} has been added to your list of Categories!`);
     }
 
     console.log("categoryMaker saves database")
